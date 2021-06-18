@@ -161,7 +161,7 @@ $(document).ready(function() {
   var circle6 = document.getElementById('circlenodeJS');
   var circle7 = document.getElementById('circlec');
   var circle8 = document.getElementById('circlePy');
-  var circle9 = document.getElementById('circleMl');
+  var circle9 = document.getElementById('circleAz');
   var circumference = 20 * 2 * Math.PI;
   circle.style.strokeDasharray = `${circumference} ${circumference}`;
   circle.style.strokeDashoffset = `${circumference}`;
@@ -190,7 +190,7 @@ $(document).ready(function() {
   circle6.style.strokeDashoffset = circumference - 45 / 100 * circumference;
   circle7.style.strokeDashoffset = circumference - 65 / 100 * circumference;
   circle8.style.strokeDashoffset = circumference - 52 / 100 * circumference;
-  circle9.style.strokeDashoffset = circumference - 52 / 100 * circumference;
+  circle9.style.strokeDashoffset = circumference - 45 / 100 * circumference;
 
   //section for skills svg circle ends
 
