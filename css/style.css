@@ -4,10 +4,11 @@ html, body {
 }
 
 body {
-  background-image: linear-gradient(to right top, #da00d6, #b938db, #974cdc, #7657d7, #565dce, #3d6bd2, #2177d4, #0081d2, #0098dc, #00aedb, #00c1d2, #00d2c5);
-  background-repeat: no-repeat;
-  overflow-x: hidden;
-  overflow-y: hidden;
+    background: rgb(70,70,75);
+    background: radial-gradient(circle, rgba(70,70,75,1) 88%, rgba(255,0,79,1) 100%);
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 /* fonts known as brush fonts like selima, hensa*/
