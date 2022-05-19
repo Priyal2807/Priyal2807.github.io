@@ -27,8 +27,8 @@ body {
 
 .wrapper div {
   position: absolute;
-  height: 2.5em;
-  width: 2.5em;
+  height: auto;
+  width: 60%;
   background-color: white;
   border-radius: 50%;
 }
