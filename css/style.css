@@ -349,7 +349,6 @@ svg text {
 /*styles for mobile devices*/
 @media screen and (max-width: 1366px) {
   div.mainBox {
-    height: 70vw;
     width: 73%;
   }
 
