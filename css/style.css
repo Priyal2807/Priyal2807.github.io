@@ -169,7 +169,6 @@ ol.mainList li {
   min-height: 3em;
   position: relative;
   font-family: 'Red Hat Display', sans-serif;
-  font-size: 1%;
   counter-increment: section;
   background: rgba(0, 0, 0, 0);
   border-radius: 0 0.5rem 0.5rem 0.5rem;
@@ -196,7 +195,7 @@ ol.mainList li::before, ol.mainList li::after {
   font-style: italic;
   color: white;
   font-family: 'Abril Fatface', serif;
-  font-size: 0.7vw;
+  font-size: 1vw;
   height: 3.5rem;
   left: -4rem;
   overflow: hidden;
@@ -391,7 +390,7 @@ svg text {
 
   ol.mainList li {
     width: 56vw;
-    font-size: 1.6vw;
+    font-size: 1vw;
     margin: 0.8vw 0.8vw 0.8vw 0.8vw;
   }
 
