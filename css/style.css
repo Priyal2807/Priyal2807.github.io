@@ -4,10 +4,11 @@ html, body {
 }
 
 body {
-  background-image: linear-gradient(to right top, #da00d6, #b938db, #974cdc, #7657d7, #565dce, #3d6bd2, #2177d4, #0081d2, #0098dc, #00aedb, #00c1d2, #00d2c5);
-  background-repeat: no-repeat;
-  overflow-x: hidden;
-  overflow-y: hidden;
+    background: rgb(96,96,103);
+    background: linear-gradient(90deg, rgba(96,96,103,1) 0%, rgba(23,2,8,1) 100%);
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 /* fonts known as brush fonts like selima, hensa*/
@@ -58,17 +59,17 @@ div.mYcontainer {
 
 /* most imp mainbox for every div starts*/
 div.mainBox {
-  margin: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); /* line 64-65 to bring the box in the centre*/
-  position: absolute;
-  width: 50%; 
-  height: 80%;
-  background-color: white;
-  box-shadow: 8px 8px 4px #181717;
-  text-align: center;
-  border-radius: 1.2vh 1.2vh 1.2vh 1.2vh;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* line 64-65 to bring the box in the centre*/
+    position: absolute;
+    width: 50%;
+    height: 80%;
+    background-color: #efeffb;
+    box-shadow: 8px 8px 4px #181717;
+    text-align: center;
+    border-radius: 1.2vh 1.2vh 1.2vh 1.2vh;
 }
 
 /* most imp mainbox for every div end*/
@@ -406,7 +407,7 @@ svg text {
   }
 
   .actualContent p {
-    font-size: 2vw;
+    font-size: 1.5vw;
   }
 }
 
