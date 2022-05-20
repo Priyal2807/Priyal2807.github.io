@@ -46,21 +46,24 @@ body {
 }
 
 /* css for background animation bubbles end*/
+
+/*css for the main container starts */
 div.mYcontainer {
   margin: auto auto auto auto;
   position: relative;
   height: 100%;
   width: 100%;
 }
+/* css for the main container ends*/
 
 /* most imp mainbox for every div starts*/
 div.mainBox {
   margin: 0;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%); /* line 64-65 to bring the box in the centre*/
   position: absolute;
-  width: 50%;
+  width: 50%; 
   height: 80%;
   background-color: white;
   box-shadow: 8px 8px 4px #181717;
@@ -69,6 +72,7 @@ div.mainBox {
 }
 
 /* most imp mainbox for every div end*/
+
 /*style for centering the div both horizontally and vertically*/
 div.contentMainPage, .projectDetails, .skillback, .projectBack, .contactBack, .abtMeback, .contactDetails, .ContentHolder, .actualContent, .contactIcons {
   margin: 0;
@@ -165,7 +169,7 @@ ol.mainList li {
   min-height: 3em;
   position: relative;
   font-family: 'Red Hat Display', sans-serif;
-  font-size: 1em;
+  font-size: 0.2em;
   counter-increment: section;
   background: rgba(0, 0, 0, 0);
   border-radius: 0 0.5rem 0.5rem 0.5rem;
