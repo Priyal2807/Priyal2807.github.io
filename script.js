@@ -189,8 +189,8 @@ $(document).ready(function() {
   circle5.style.strokeDashoffset = circumference - 35 / 100 * circumference;
   circle6.style.strokeDashoffset = circumference - 35 / 100 * circumference;
   circle7.style.strokeDashoffset = circumference - 65 / 100 * circumference;
-  circle8.style.strokeDashoffset = circumference - 52 / 100 * circumference;
-  circle9.style.strokeDashoffset = circumference - 45 / 100 * circumference;
+  circle8.style.strokeDashoffset = circumference - 35 / 100 * circumference;
+  circle9.style.strokeDashoffset = circumference - 55 / 100 * circumference;
 
   //section for skills svg circle ends
 
