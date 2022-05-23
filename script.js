@@ -186,8 +186,8 @@ $(document).ready(function() {
   circle2.style.strokeDashoffset = circumference - 67 / 100 * circumference;
   circle3.style.strokeDashoffset = circumference - 65 / 100 * circumference;
   circle4.style.strokeDashoffset = circumference - 64 / 100 * circumference;
-  circle5.style.strokeDashoffset = circumference - 45 / 100 * circumference;
-  circle6.style.strokeDashoffset = circumference - 45 / 100 * circumference;
+  circle5.style.strokeDashoffset = circumference - 35 / 100 * circumference;
+  circle6.style.strokeDashoffset = circumference - 35 / 100 * circumference;
   circle7.style.strokeDashoffset = circumference - 65 / 100 * circumference;
   circle8.style.strokeDashoffset = circumference - 52 / 100 * circumference;
   circle9.style.strokeDashoffset = circumference - 45 / 100 * circumference;
