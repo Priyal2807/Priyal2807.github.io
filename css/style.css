@@ -1,38 +1,39 @@
 html, body {
   margin: 0;
-  height: 100%;
+  height: 100%; /*100% of the root i.e. viewport*/
 }
 
 body {
     background: rgb(96,96,103);
     background: linear-gradient(90deg, rgba(96,96,103,1) 0%, rgba(23,2,8,1) 100%);
     background-repeat: no-repeat;
-    overflow-x: hidden;
+    overflow-x: hidden; /*helps me to restrict the html doc in viewport*/
     overflow-y: hidden;
 }
-
 /* fonts known as brush fonts like selima, hensa*/
 @font-face {
-  font-family: 'hensa';
-  src: url('../fonts/Hensa.otf') format('opentype');
+    font-family: 'hensa';
+    src: url('../fonts/Hensa.otf') format('opentype');
 }
+
+/*css for the main container starts */
+div.mYcontainer {
+    margin: auto auto auto auto;
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+/* css for the main container ends*/
 
 /* css for background animation bubbles start*/
 .wrapper {
   position: absolute;
-  width: 100%;
+  width: 100%; /*100% of the parent element which is myContainer*/
   height: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
 }
 
-.wrapper div {
-  position: absolute;
-  height: 2.5em;
-  width: 2.5em;
-  background-color: white;
-  border-radius: 50%;
-}
 
 @keyframes animate {
   0% {
@@ -48,31 +49,24 @@ body {
 
 /* css for background animation bubbles end*/
 
-/*css for the main container starts */
-div.mYcontainer {
-  margin: auto auto auto auto;
-  position: relative;
-  height: 100%;
-  width: 100%;
-}
-/* css for the main container ends*/
 
-/* most imp mainbox for every div starts*/
+
+/*  mainbox class for every div starts*/
 div.mainBox {
     margin: 0;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* line 64-65 to bring the box in the centre*/
+    transform: translate(-50%, -50%); 
     position: absolute;
-    width: 50%;
+    width: 50%; /*50% of myContainer*/
     height: 80%;
     background-color: #efeffb;
     box-shadow: 8px 8px 4px #181717;
     text-align: center;
-    border-radius: 1.2vh 1.2vh 1.2vh 1.2vh;
+    border-radius: 1rem;
 }
 
-/* most imp mainbox for every div end*/
+/* mainbox class for every div end*/
 
 /*style for centering the div both horizontally and vertically*/
 div.contentMainPage, .projectDetails, .skillback, .projectBack, .contactBack, .abtMeback, .contactDetails, .ContentHolder, .actualContent, .contactIcons {
@@ -85,28 +79,28 @@ div.contentMainPage, .projectDetails, .skillback, .projectBack, .contactBack, .a
 
 /*style for the first div heading and paragraph*/
 .mainContent {
-  padding-left: 3vh;
-  padding-right: 3vh;
-  padding-bottom: 1vh;
+  padding-left: 3rem;
+  padding-right: 3rem;
+  padding-bottom: 3rem;
   font-family: 'Red Hat Display', sans-serif;
 }
 
 /*typewriting effect*/
-.typewriter h1 {
+.typewriter>h1 {
   overflow: hidden;
-  border-right: .15em solid black;
+  border-right: .15rem solid black;
   white-space: nowrap;
   margin: 0 auto;
-  letter-spacing: .15em;
+  letter-spacing: .15rem;
   display: -webkit-inline-box;
   animation:
     typing 3.5s steps(40, end),
     caret .75s step-end infinite;
-  font-size: 3vw;
+  font-size: 3rem;
 }
 
-.typewriter p {
-  font-size: 1vw;
+.typewriter>p {
+  font-size: 1rem;
 }
 
 @keyframes typing {
@@ -139,7 +133,7 @@ div.contentMainPage, .projectDetails, .skillback, .projectBack, .contactBack, .a
 }
 
 .skillback p, .projectBack p, .contactBack p, .abtMeback p {
-  font-size: 7vw;
+  font-size: 7rem;
   color: black;
   font-family: 'hensa';
 }
@@ -163,7 +157,6 @@ ol.mainList {
   counter-reset: section;
   list-style: none;
   padding: initial;
-  text-align: -webkit-center;
 }
 
 ol.mainList li {
