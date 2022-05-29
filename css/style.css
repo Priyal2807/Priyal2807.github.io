@@ -1,15 +1,15 @@
 html, body {
-  margin: 0;
-  height: 100%; /*100% of the root i.e. viewport*/
+    height: 100%;
 }
 
 body {
     background: rgb(96,96,103);
     background: linear-gradient(90deg, rgba(96,96,103,1) 0%, rgba(23,2,8,1) 100%);
     background-repeat: no-repeat;
-    overflow-x: hidden; /*helps me to restrict the html doc in viewport*/
-    overflow-y: hidden;
+    overflow-x:hidden;
+    overflow-y:hidden;
 }
+
 /* fonts known as brush fonts like selima, hensa*/
 @font-face {
     font-family: 'hensa';
@@ -17,395 +17,310 @@ body {
 }
 
 /*css for the main container starts */
-div.mYcontainer {
+div.mYcontainer { 
     margin: auto auto auto auto;
     position: relative;
-    height: 100%;
+    height: 100%; /*this is essentially the same as body*/
     width: 100%;
 }
 /* css for the main container ends*/
 
+
 /* css for background animation bubbles start*/
 .wrapper {
-  position: absolute;
-  width: 100%; /*100% of the parent element which is myContainer*/
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 
+.wrapper div {
+        position: absolute;
+        height: 2.5rem; /*to make the bubbles appear*/
+        width: 2.5rem;
+        background-color: white;
+        border-radius: 50%;
+    }
 
 @keyframes animate {
-  0% {
-    transform: scale(0) translateY(0) rotate(0);
-    opacity: 0.7;
-  }
+    0% {
+        transform: scale(0) translateY(0) rotate(0);
+        opacity: 0.7;
+    }
 
-  100% {
-    transform: scale(1.9) translateY(3em) rotate(360deg);
-    opacity: 0;
-  }
+    100% {
+        transform: scale(1.9) translateY(3em) rotate(360deg);
+        opacity: 0;
+    }
 }
 
 /* css for background animation bubbles end*/
 
 
 
-/*  mainbox class for every div starts*/
+/* css for mainbox for every div starts*/
 div.mainBox {
     margin: 0;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); 
+    transform: translate(-50%, -50%); /* line 64-65 to bring the box in the centre*/
     position: absolute;
-    width: 50%; /*50% of myContainer*/
+    width: 50%;
     height: 80%;
     background-color: #efeffb;
-    box-shadow: 8px 8px 4px #181717;
+    box-shadow: 0.5rem 0.5rem 0.5rem 0.25rem #181717;
     text-align: center;
-    border-radius: 1rem;
+    border-radius: 1rem 1rem 1rem 1rem;
 }
 
-/* mainbox class for every div end*/
+/*css for mainbox for every div end*/
 
 /*style for centering the div both horizontally and vertically*/
 div.contentMainPage, .projectDetails, .skillback, .projectBack, .contactBack, .abtMeback, .contactDetails, .ContentHolder, .actualContent, .contactIcons {
-  margin: 0;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  position: absolute;
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
 }
 
 /*style for the first div heading and paragraph*/
 .mainContent {
-  padding-left: 3rem;
-  padding-right: 3rem;
-  padding-bottom: 3rem;
-  font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
 }
 
 /*typewriting effect*/
 .typewriter>h1 {
-  overflow: hidden;
-  border-right: .15rem solid black;
-  white-space: nowrap;
-  margin: 0 auto;
-  letter-spacing: .15rem;
-  display: -webkit-inline-box;
-  animation:
-    typing 3.5s steps(40, end),
-    caret .75s step-end infinite;
-  font-size: 3rem;
+    overflow: hidden;
+    border-right: .15rem solid black;
+    white-space: nowrap;
+    margin: 0 auto;
+    letter-spacing: .15rem;
+    animation: typing 3.5s steps(40, end), caret .75s step-end infinite;
+    font-size: 3rem;
 }
 
-.typewriter>p {
-  font-size: 1rem;
-}
 
 @keyframes typing {
-  from {
-    width: 0
-  }
+    from {
+        width: 0
+    }
 
-  to {
-    width: 100%;
-  }
+    to {
+        width: 100%;
+    }
 }
 
 /* The typewriter cursor effect */
 @keyframes caret {
-  from, to {
-    border-color: transparent
-  }
+    from, to {
+        border-color: transparent
+    }
 
-  50% {
-    border-color: black;
-  }
+    50% {
+        border-color: black;
+    }
 }
 
 #skillBox, #contactBox, #AboutMe, #projectBox {
-  display: none;
+    display: none;
 }
 
 .skillback, .projectBack, .contactBack, .abtMeback {
-  opacity: 0.08;
+    opacity: 0.08;
 }
-
 .skillback p, .projectBack p, .contactBack p, .abtMeback p {
-  font-size: 7rem;
-  color: black;
-  font-family: 'hensa';
-}
+        font-size: 7rem;
+        color: black;
+        font-family: 'hensa';
+    }
 
 /*style for centering the content inside a div*/
 .contactDetails, .projectDetails {
-  top: 40%;
-  text-align: center;
-  justify-content: center;
-  display: flex;
-  width: 80%;
+    justify-content: center;
+    display: flex;
 }
 
-/*different style for projectDetails as per requirements*/
-.projectDetails {
-  top: 46%;
-}
 
 /* style for the list items and list in the project div*/
 ol.mainList {
-  counter-reset: section;
-  list-style: none;
-  padding: initial;
+    counter-reset: section;
+    list-style: none;
+    padding: initial;
 }
 
 ol.mainList li {
-  min-height: 3em;
-  position: relative;
-  font-family: 'Red Hat Display', sans-serif;
-  counter-increment: section;
-  background: rgba(0, 0, 0, 0);
-  border-radius: 0 0.5rem 0.5rem 0.5rem;
-  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
-  margin: 0.6em 0.6em 0.6em 0.6em;
-  text-align: center;
-  padding-left: 1.5em;
-}
+        min-height: 3rem;
+        position: relative; /*this is required as the counter li are absolute and depend on this*/
+        font-family: 'Red Hat Display', sans-serif;
+        counter-increment: section;
+        background: rgba(0, 0, 0, 0);
+        border-radius: 0 0.5rem 0.5rem 0.5rem;
+        box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+        padding-left: 2rem;
+    }
 
 ol.mainList li a {
-  color: black;
-}
-
-ol.mainList li a.nounderline:hover {
-  text-decoration: none;
-}
+            color: black; /*a does not inherit parent style*/
+        }
 
 /*style for the counter displayed on the left side*/
-ol.mainList li::before, ol.mainList li::after {
-  border: 0.1vw #484747 solid;
-  border-radius: 0.5vw 1vw 0.5vw 0.5vw;
-  background: cornflowerblue;
-  font-weight: bold;
-  font-style: italic;
-  color: white;
-  font-family: 'Abril Fatface', serif;
-  font-size: 1vw;
-  height: 3.5rem;
-  left: -4rem;
-  overflow: hidden;
-  position: absolute;
-  top: 1rem;
-  width: 3.2rem;
-}
+    ol.mainList li::before, ol.mainList li::after {
+        border: 0.1rem #484747 solid;
+        border-radius: 0.5rem 1rem 0.5rem 0.5rem;
+        background: cornflowerblue;
+        font-weight: bold;
+        font-style: italic;
+        color: white;
+        font-family: 'Abril Fatface', serif;
+        font-size: 1rem;
+        height: 3.5rem;
+        width: 3.2rem;
+        left: -4rem;
+        top: 1rem;
+        overflow: hidden;
+        position: absolute;
+       
+    }
 
 ol.mainList li::before {
-  align-items: flex-end;
-  content: counter(section);
-  color: white;
-  display: flex;
-  justify-content: flex-end;
-  padding: 0.7em 0.2em 0.1em 0.1em;
-  z-index: 1;
+            align-items: flex-end;
+            content: counter(section);
+            color: white;
+            display: flex;
+            justify-content: flex-end; /*to bring the number in the counter in the corner*/
+            padding: 0.7rem 0.2rem 0.1rem 0.1rem;
+            z-index: 1;
 }
 
 /*styles mainly for the contactDetails div*/
 .contactDetails p {
-  font-size: 2vw;
-  font-family: monospace;
-  margin-left: 0.6vw;
+    font-size: 2rem;
+    font-family: monospace;
 }
 
+/*envelope icon*/
 .contactDetails i {
-  color: black;
-  font-size: 2.8vw;
-  float: left;
+    color: black;
+    font-size: 1rem;
 }
 
+/*other icons on the contact page*/
 .contactIcons {
-  top: 60%;
-  width: 50%;
-  display: flex;
-  justify-content: center;
+    top:60%;
+    position:absolute;
+    display: flex;
+    justify-content: center;
 }
-
 .contactIcons i {
-  font-size: 3.3vw;
-  margin: 0.4vw 0.4vw 0.4vw 0.4vw;
+        font-size: 3rem;
+        margin: 0.4rem 0.4rem 0.4rem 0.4rem;
 }
 
-.contactIcons img {
-  height: 4vw;
-  width: 4vw;
-}
-
-.contactIcons button {
-  background: none;
-  border: none;
-}
 
 /*style for skills circles*/
 svg {
-  height: 9vw;
-  text-align: center;
-  justify-content: center;
-  position: relative;
-  width: 10vw;
-}
-
-circle {
-  position: relative;
+    height: 9vw;
+    width: 10vw;
 }
 
 .progress_circle {
-  transform: rotate(-90deg);
-  transform-origin: 50% 50%;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
 }
 
 .eachrow {
-  margin-top: 2.2vw;
-  margin-bottom: 2.2vw;
-}
-
-.innerSkillsDiv {
-  position: relative;
-  top: 50%;
-  transform: translateY(-60%);
-}
-
-#pbardiv {
-  margin: 1vw 1vw 1vw 1vw;
-  height: 1vw;
-  text-align: center;
-  border-radius: 1vw;
-}
-
-#pbar {
-  height: 100%;
-  color: black;
-  background-color: #D4E6F1;
-  text-align: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 svg text {
-  font-family: 'Red Hat Display', sans-serif;
+    font-family: 'Red Hat Display', sans-serif;
 }
 
 /*style for the icon box in right side of div*/
 .mainBoxIcons {
-  right: 0;
-  bottom: 0;
-  position: fixed;
-  width: fit-content;
-  height: 3vw;
-  margin-right: 2vw;
-  margin-bottom: 1vw;
-  display: block;
-  opacity: 1;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    margin-right:1rem;
 }
 
 .mainBoxIcons button {
-  border: none;
-  background: none;
-  font-size: 2vw;
-}
+        border: none;
+        background: none;
+        font-size: 3rem;
+    }
 
 .ContentHolder, .actualContent {
-  justify-content: center;
-  text-align: center;
-  width: 90%;
-  height: 90%;
-}
-
-/*style for the background diamond in about me div*/
-#linebox {
-  height: unset;
-  width: unset;
-  opacity: 0.4;
-}
-
-#secondLine {
-  transform: scale(1, -1);
+    text-align: center;
 }
 
 .actualContent p {
-  font-size: 1vw;
-  font-family: 'Red Hat Display', sans-serif;
-  letter-spacing: 0.2vw;
+    font-size: 1rem;
+    font-family: 'Red Hat Display', sans-serif;
+    letter-spacing: 0.2rem;
 }
 
-@keyframes dropNav {
-  from {
-    top: 10%;
-  }
-
-  to {
-    top: 50%;
-  }
-}
 
 /*styles for mobile devices*/
 @media screen and (max-width: 1366px) {
-  div.mainBox {
-    width: 73%;
-  }
+    div.mainBox {
+        width: 70%;
+    }
 
-  .typewriter h1 {
-    font-size: 4.3vw;
-  }
+    .typewriter h1 {
+        font-size: 4rem;
+    }
 
-  .typewriter p {
-    font-size: 2vw;
-  }
+    .typewriter p {
+        font-size: 2rem;
+    }
 
-  .mainBoxIcons {
-    height: 5vw;
-  }
+    .mainBoxIcons {
+        height: 5rem;
+    }
 
-  .contactIcons i {
-    font-size: 5vw;
-  }
+    .contactIcons i {
+        font-size: 5rem;
+    }
+    .contactDetails p {
+        font-size: 3rem;
+    }
 
-  .contactIcons img {
-    height: 5vw;
-    width: 5vw;
-  }
+    .contactDetails i {
+        font-size: 4rem;
+    }
 
-  .contactDetails p {
-    font-size: 3vw;
-  }
+    ol.mainList {
+        margin: auto auto;
+    }
 
-  .contactDetails i {
-    font-size: 4.2vw;
-  }
+        ol.mainList li {
+            width: 56vw;
+            font-size: 1vw;
+            margin: 0.8vw 0.8vw 0.8vw 0.8vw;
+        }
 
-  ol.mainList {
-    margin: auto auto;
-  }
+            ol.mainList li::before, ol.mainList li::after {
+                height: 3vw;
+                width: 3vw;
+                left: -1rem;
+                top: 0rem;
+            }
 
-  ol.mainList li {
-    width: 56vw;
-    font-size: 1vw;
-    margin: 0.8vw 0.8vw 0.8vw 0.8vw;
-  }
+    .contactBack p, .skillback p, .projectBack p, .abtMeback p {
+        font-size: 10vw;
+    }
 
-  ol.mainList li::before, ol.mainList li::after {
-    height: 3vw;
-    width: 3vw;
-    left: -1rem;
-    top: 0rem;
-  }
-
-  .contactBack p, .skillback p, .projectBack p, .abtMeback p {
-    font-size: 10vw;
-  }
-
-  .actualContent p {
-    font-size: 1.5vw;
-  }
+    .actualContent p {
+        font-size: 1.5vw;
+    }
 }
 
 @media screen and (min-width: 921px) and (max-width: 1230px) {
-  div.mainBox {
-    width: 65vw;
-  }
+    div.mainBox {
+        width: 65vw;
+    }
 }
