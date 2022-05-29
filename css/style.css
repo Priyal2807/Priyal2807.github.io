@@ -22,7 +22,7 @@ div.mYcontainer {
     position: relative;
     height: 100%; /*this is essentially the same as body*/
     width: 100%;
-    font-size: 2vw;
+    font-size: 2vw; /*this is required all the fonts in the doc further are based on this*/
   
 }
 /* css for the main container ends*/
@@ -157,7 +157,6 @@ ol.mainList li {
         position: relative; /*this is required as the counter li are absolute and depend on this*/
         font-family: 'Red Hat Display', sans-serif;
         counter-increment: section;
-        background: rgba(0, 0, 0, 0);
         border-radius: 0 0.5rem 0.5rem 0.5rem;
         box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
         padding-left: 2rem;
@@ -268,52 +267,44 @@ svg text {
 
 /*styles for mobile devices*/
 @media screen and (max-width: 1366px) {
+    div.mYcontainer
+    {
+        font-size:1vw;
+    }
     div.mainBox {
         width: 70%;
     }
 
-    .typewriter h1 {
+    .typewriter > h1, .contactIcons i, .contactDetails p, .contactDetails i {
+        font-size: 3em;
+    }
+
+    .typewriter p, .mainBoxIcons button {
         font-size: 2em;
-    }
-
-    .typewriter p {
-        font-size: 1em;
-    }
-
-    .mainBoxIcons {
-        height: 2em;
-    }
-
-    .contactIcons i {
-        font-size: 2em;
-    }
-    .contactDetails p,.contactDetails i {
-        font-size: 1.5em; /*this is 1.5 time 2vw set in myContainer, same for all font size ending with unit em*/
     }
 
     ol.mainList {
         margin: auto auto;
     }
 
-        ol.mainList li {
-            width: 56vw;
-            font-size: 1vw;
-            margin: 0.8vw 0.8vw 0.8vw 0.8vw;
-        }
+    ol.mainList li {
+       width: 56vw;
+       font-size: 1em;
+       margin: 0.8vw 0.8vw 0.8vw 0.8vw;
+    }
 
-            ol.mainList li::before, ol.mainList li::after {
-                height: 3vw;
-                width: 3vw;
-                left: -1rem;
-                top: 0rem;
-            }
+    ol.mainList li::before, ol.mainList li::after {
+       height: 3vw;
+       width: 3vw;
+       left: -1rem;
+    }
 
     .contactBack p, .skillback p, .projectBack p, .abtMeback p {
-        font-size: 5em;
+        font-size: 8em;
     }
 
     .actualContent p {
-        font-size: 0.5em;
+        font-size: 1em;
     }
 }
 
