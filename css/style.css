@@ -22,6 +22,8 @@ div.mYcontainer {
     position: relative;
     height: 100%; /*this is essentially the same as body*/
     width: 100%;
+    font-size: 2vw;
+  
 }
 /* css for the main container ends*/
 
@@ -98,7 +100,7 @@ div.contentMainPage, .projectDetails, .skillback, .projectBack, .contactBack, .a
     margin: 0 auto;
     letter-spacing: .15rem;
     animation: typing 3.5s steps(40, end), caret .75s step-end infinite;
-    font-size: 3rem;
+    font-size: 3em;
 }
 
 
@@ -131,7 +133,7 @@ div.contentMainPage, .projectDetails, .skillback, .projectBack, .contactBack, .a
     opacity: 0.08;
 }
 .skillback p, .projectBack p, .contactBack p, .abtMeback p {
-        font-size: 7rem;
+        font-size: 5em;
         color: black;
         font-family: 'hensa';
     }
@@ -174,7 +176,7 @@ ol.mainList li a {
         font-style: italic;
         color: white;
         font-family: 'Abril Fatface', serif;
-        font-size: 1rem;
+        font-size: 1em;
         height: 3.5rem;
         width: 3.2rem;
         left: -4rem;
@@ -196,14 +198,14 @@ ol.mainList li::before {
 
 /*styles mainly for the contactDetails div*/
 .contactDetails p {
-    font-size: 2rem;
+    font-size: 1em;
     font-family: monospace;
 }
 
 /*envelope icon*/
 .contactDetails i {
     color: black;
-    font-size: 1rem;
+    font-size: 1em;
 }
 
 /*other icons on the contact page*/
@@ -214,7 +216,7 @@ ol.mainList li::before {
     justify-content: center;
 }
 .contactIcons i {
-        font-size: 3rem;
+        font-size: 1em;
         margin: 0.4rem 0.4rem 0.4rem 0.4rem;
 }
 
@@ -250,7 +252,7 @@ svg text {
 .mainBoxIcons button {
         border: none;
         background: none;
-        font-size: 3rem;
+        font-size: 1em;
     }
 
 .ContentHolder, .actualContent {
@@ -258,7 +260,7 @@ svg text {
 }
 
 .actualContent p {
-    font-size: 1rem;
+    font-size: 0.5em;
     font-family: 'Red Hat Display', sans-serif;
     letter-spacing: 0.2rem;
 }
@@ -271,26 +273,22 @@ svg text {
     }
 
     .typewriter h1 {
-        font-size: 4rem;
+        font-size: 2em;
     }
 
     .typewriter p {
-        font-size: 2rem;
+        font-size: 1em;
     }
 
     .mainBoxIcons {
-        height: 5rem;
+        height: 2em;
     }
 
     .contactIcons i {
-        font-size: 5rem;
+        font-size: 2em;
     }
-    .contactDetails p {
-        font-size: 3rem;
-    }
-
-    .contactDetails i {
-        font-size: 4rem;
+    .contactDetails p,.contactDetails i {
+        font-size: 1.5em; /*this is 1.5 time 2vw set in myContainer, same for all font size ending with unit em*/
     }
 
     ol.mainList {
@@ -311,11 +309,11 @@ svg text {
             }
 
     .contactBack p, .skillback p, .projectBack p, .abtMeback p {
-        font-size: 10vw;
+        font-size: 5em;
     }
 
     .actualContent p {
-        font-size: 1.5vw;
+        font-size: 0.5em;
     }
 }
 
