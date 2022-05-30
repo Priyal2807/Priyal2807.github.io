@@ -1,4 +1,3 @@
-$(document).ready(function() {
 
   //Section for typewriting begins
   $('[data-toggle="tooltip"]').tooltip();
@@ -193,5 +192,3 @@ $(document).ready(function() {
   circle9.style.strokeDashoffset = circumference - 55 / 100 * circumference;
 
   //section for skills svg circle ends
-
-});
