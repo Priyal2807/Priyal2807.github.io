@@ -155,14 +155,13 @@
 var array_for_circles = ["circle", 'circleCSS', 'circlejava', 'circleJS', 'circlemgb', 'circlenodeJS', 'circlec', 'circlePy', 'circleAz']
 var cir = 0;
 var circumference = 20 * 2 * Math.PI;
-
 var cir_array = {}
+
 for (cir = 0; cir < array_for_circles.length; cir++) {
-    var circle_name = array_for_circles[cir];
     if (cir === 0)
-        cir_array[cir] = document.querySelector(circle_name); /*have to check why I used query selector*/
+        cir_array[cir] = document.querySelector(array_for_circles[cir]); /*have to check why I used query selector*/
     else
-        cir_array[cir] = document.getElementById(circle_name);
+        cir_array[cir] = document.getElementById(array_for_circles[cir]);
     cir_array[cir].style.strokeDasharray = `${circumference} ${circumference}`;
     cir_array[cir].style.strokeDashoffset = `${circumference}`;
     if (array_for_circles[cir] === 'circlemgb' || array_for_circles[cir] === 'circlenodeJS' || array_for_circles[cir] === 'circlePy')
