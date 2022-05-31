@@ -150,45 +150,28 @@
   })
   // section for replacing div on clicking ends
 
+//section for adding the circumference in the skills circle
 
-  //section for skills circles svg begins
-  var circle = document.querySelector('circle');
-  var circle2 = document.getElementById('circleCSS');
-  var circle3 = document.getElementById('circlejava');
-  var circle4 = document.getElementById('circleJS');
-  var circle5 = document.getElementById('circlemgb');
-  var circle6 = document.getElementById('circlenodeJS');
-  var circle7 = document.getElementById('circlec');
-  var circle8 = document.getElementById('circlePy');
-  var circle9 = document.getElementById('circleAz');
-  var circumference = 20 * 2 * Math.PI;
-  circle.style.strokeDasharray = `${circumference} ${circumference}`;
-  circle.style.strokeDashoffset = `${circumference}`;
-  circle2.style.strokeDasharray = `${circumference} ${circumference}`;
-  circle2.style.strokeDashoffset = `${circumference}`;
-  circle3.style.strokeDasharray = `${circumference} ${circumference}`;
-  circle3.style.strokeDashoffset = `${circumference}`;
-  circle4.style.strokeDasharray = `${circumference} ${circumference}`;
-  circle4.style.strokeDashoffset = `${circumference}`;
-  circle5.style.strokeDasharray = `${circumference} ${circumference}`;
-  circle5.style.strokeDashoffset = `${circumference}`;
-  circle6.style.strokeDasharray = `${circumference} ${circumference}`;
-  circle6.style.strokeDashoffset = `${circumference}`;
-  circle7.style.strokeDasharray = `${circumference} ${circumference}`;
-  circle7.style.strokeDashoffset = `${circumference}`;
-  circle8.style.strokeDasharray = `${circumference} ${circumference}`;
-  circle8.style.strokeDashoffset = `${circumference}`;
-  circle9.style.strokeDasharray = `${circumference} ${circumference}`;
-  circle9.style.strokeDashoffset = `${circumference}`;
+var array_for_circles = ["circle", 'circleCSS', 'circlejava', 'circleJS', 'circlemgb', 'circlenodeJS', 'circlec', 'circlePy', 'circleAz']
+var cir = 0;
+var circumference = 20 * 2 * Math.PI;
 
-  circle.style.strokeDashoffset = circumference - 60 / 100 * circumference;
-  circle2.style.strokeDashoffset = circumference - 67 / 100 * circumference;
-  circle3.style.strokeDashoffset = circumference - 65 / 100 * circumference;
-  circle4.style.strokeDashoffset = circumference - 64 / 100 * circumference;
-  circle5.style.strokeDashoffset = circumference - 35 / 100 * circumference;
-  circle6.style.strokeDashoffset = circumference - 35 / 100 * circumference;
-  circle7.style.strokeDashoffset = circumference - 65 / 100 * circumference;
-  circle8.style.strokeDashoffset = circumference - 35 / 100 * circumference;
-  circle9.style.strokeDashoffset = circumference - 55 / 100 * circumference;
+var cir_array = {}
+for (cir = 0; cir < array_for_circles.length; cir++) {
+    var circle_name = array_for_circles[cir];
+    if (cir === 0)
+        cir_array[cir] = document.querySelector(circle_name); /*have to check why I used query selector*/
+    else
+        cir_array[cir] = document.getElementById(circle_name);
+    cir_array[cir].style.strokeDasharray = `${circumference} ${circumference}`;
+    cir_array[cir].style.strokeDashoffset = `${circumference}`;
+    if (array_for_circles[cir] === 'circlemgb' || array_for_circles[cir] === 'circlenodeJS' || array_for_circles[cir] === 'circlePy')
+        cir_array[cir].style.strokeDashoffset = circumference - 35 / 100 * circumference;
+    if (array_for_circles[cir] === 'circleCSS' || array_for_circles[cir] === 'circlejava' || array_for_circles[cir] === 'circleJS' || array_for_circles[cir] === 'circlec' || array_for_circles[cir] === 'circleAz')
+        cir_array[cir].style.strokeDashoffset = circumference - 65 / 100 * circumference;
+    if (array_for_circles[cir] === 'circle')
+        cir_array[cir].style.strokeDashoffset = circumference - 60 / 100 * circumference;
+}
 
-  //section for skills svg circle ends
+ 
+
