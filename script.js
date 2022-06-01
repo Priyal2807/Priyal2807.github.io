@@ -152,21 +152,19 @@
 
 //section for adding the circumference in the skills circle
 
-var array_for_circles = ["circle", 'circleCSS', 'circlejava', 'circleJS', 'circlemgb', 'circlenodeJS', 'circlec', 'circlePy', 'circleAz']
+var array_for_circles = ['circleHTMl', 'circleCSS', 'circlejava', 'circleJS', 'circlemgb', 'circlenodeJS', 'circlec', 'circlePy', 'circleAz']
 var cir = 0;
 var circumference = 20 * 2 * Math.PI;
 var cir_array = {}
 
 for (cir = 0; cir < array_for_circles.length; cir++) {
-    if (cir === 0)
-        cir_array[cir] = document.querySelector(array_for_circles[cir]); /*have to check why I used query selector*/
-    else
-        cir_array[cir] = document.getElementById(array_for_circles[cir]);
+
+    cir_array[cir] = document.getElementById(array_for_circles[cir]);
     cir_array[cir].style.strokeDasharray = `${circumference} ${circumference}`;
     cir_array[cir].style.strokeDashoffset = `${circumference}`;
     if (array_for_circles[cir] === 'circlemgb' || array_for_circles[cir] === 'circlenodeJS' || array_for_circles[cir] === 'circlePy')
         cir_array[cir].style.strokeDashoffset = circumference - 35 / 100 * circumference;
-    if (array_for_circles[cir] === 'circleCSS' || array_for_circles[cir] === 'circlejava' || array_for_circles[cir] === 'circleJS' || array_for_circles[cir] === 'circlec' || array_for_circles[cir] === 'circleAz')
+    if (array_for_circles[cir] === 'circleCSS' || array_for_circles[cir] === 'circlejava' || array_for_circles[cir] === 'circleJS' || array_for_circles[cir] === 'circlec' || array_for_circles[cir] === 'circleAz' || array_for_circles[cir] === 'circleHTMl')
         cir_array[cir].style.strokeDashoffset = circumference - 65 / 100 * circumference;
     if (array_for_circles[cir] === 'circle')
         cir_array[cir].style.strokeDashoffset = circumference - 60 / 100 * circumference;
