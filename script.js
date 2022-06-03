@@ -51,102 +51,28 @@
   });
   //animation ends for background
 
-  //section for cloning iconbox in each div
-  function cloneIconBox() {
-    iconsBox.css('display', 'block');
-    iconsBox.appendTo("#skillBox");
-    iconBox2.appendTo('#contactBox');
-    iconBox3.appendTo('#projectBox');
-    iconBox4.appendTo('#AboutMe');
-    $('.proj[title]').tooltip();
-    $('.skills[title]').tooltip();
-    $('.home[title]').tooltip();
-    $('.cd[title]').tooltip();
-    $('.abtme[title]').tooltip();
-  }
-  //section ends for cloning iconbox
-
-  //section for checking the clicked box begins
-  function checkDetailBox(thisObj) {
-    if (thisObj.parent().parent().get(0).id === 'detailsBox') {
-      $("#detailsBox").fadeTo(150, 0);
-      $("#detailsBox").css('display', 'none');
-    }
-  }
-
-  function checkProjectBox(thisObj) {
-    if (thisObj.parent().parent().get(0).id === 'projectBox') {
-      $('#projectBox').fadeTo(150, 0);
-      $('#projectBox').css('display', 'none');
-    }
-  }
-
-  function checkSkillBox(thisObj) {
-    if (thisObj.parent().parent().get(0).id === 'skillBox') {
-      $('#skillBox').fadeTo(150, 0);
-      $("#skillBox").css('display', 'none');
-    }
-  }
-
-  function checkContactBox(thisObj) {
-    if (thisObj.parent().parent().get(0).id === 'contactBox') {
-      $('#contactBox').fadeTo(150, 0);
-      $("#contactBox").css('display', 'none');
-    }
-  }
-
-  function checkAboutBox(thisObj) {
-    if (thisObj.parent().parent().get(0).id === 'AboutMe') {
-      $('#AboutMe').fadeTo(150, 0);
-      $('#AboutMe').css('display', 'none');
-    }
-  }
-  //section for checking the clicked box ends
-
-
-  var iconsBox = $('.mainBoxIcons').clone();
-  var iconBox2 = $('.mainBoxIcons').clone();
-  var iconBox3 = $('.mainBoxIcons').clone();
-  var iconBox4 = $('.mainBoxIcons').clone();
-  //section for replacing div on clicking begins
   //skills icon clicked
   $('body').on('click', '.skills', function() {
-    checkDetailBox($(this));
-    checkContactBox($(this));
-    checkProjectBox($(this));
-    checkAboutBox($(this));
-    $("#skillBox").fadeTo(800, 1);
-    cloneIconBox();
+      $("#skillBox").fadeTo(800, 1);
+      $(this).parent().parent().children("#contactBox, #projectBox, #AboutMe, #detailsBox").fadeTo(150,0).css('display','none');
   });
 
   //contact icon clicked
   $('body').on('click', '.cd', function() {
-    checkSkillBox($(this));
-    checkDetailBox($(this));
-    checkProjectBox($(this));
-    checkAboutBox($(this));
-    $("#contactBox").fadeTo(800, 1);
-    cloneIconBox();
+      $("#contactBox").fadeTo(800, 1);
+      $(this).parent().parent().children("#skillBox, #projectBox, #AboutMe, #detailsBox").fadeTo(150, 0).css('display', 'none');
   });
 
   //project icon clicked
-  $('body').on('click', '.proj', function() {
-    checkSkillBox($(this));
-    checkDetailBox($(this));
-    checkContactBox($(this));
-    checkAboutBox($(this));
+$('body').on('click', '.proj', function () {
     $("#projectBox").fadeTo(800, 1);
-    cloneIconBox();
+    $(this).parent().parent().children("#contactBox, #skillBox, #AboutMe, #detailsBox").fadeTo(150, 0).css('display', 'none');
   });
 
   //about Me section clicked
-  $('body').on('click', '.abtme', function() {
-    checkSkillBox($(this));
-    checkDetailBox($(this));
-    checkContactBox($(this));
-    checkProjectBox($(this));
+$('body').on('click', '.abtme', function () {
     $("#AboutMe").fadeTo(800, 1);
-    cloneIconBox();
+    $(this).parent().parent().children("#contactBox, #projectBox, #skillBox, #detailsBox").fadeTo(150, 0).css('display', 'none');
   })
   // section for replacing div on clicking ends
 

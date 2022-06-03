@@ -242,8 +242,8 @@ svg text {
 
 /*style for the icon box in right side of div*/
 .mainBoxIcons {
-    right: 0;
-    bottom: 0;
+    right: 15%;
+    bottom: 10%;
     position: fixed;
     margin-right:1rem;
 }
@@ -310,6 +310,6 @@ svg text {
 
 @media screen and (min-width: 921px) and (max-width: 1230px) {
     div.mainBox {
-        width: 65vw;
+        width: 70%;
     }
 }
