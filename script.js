@@ -78,7 +78,7 @@ $('body').on('click', '.abtme', function () {
 
 //section for adding the circumference in the skills circle
 
-var array_for_circles = ['circleHTMl', 'circleCSS', 'circlejava', 'circleJS', 'circlemgb', 'circlenodeJS', 'circlec', 'circlePy', 'circleAz']
+var array_for_circles = ['circleHTMl', 'circleReact', 'circlejava', 'circleJS', 'circlemgb', 'circlenodeJS', 'circlec', 'circlePy', 'circleAz']
 var cir = 0;
 var circumference = 20 * 2 * Math.PI;
 var cir_array = {}
@@ -90,10 +90,12 @@ for (cir = 0; cir < array_for_circles.length; cir++) {
     cir_array[cir].style.strokeDashoffset = `${circumference}`;
     if (array_for_circles[cir] === 'circlemgb' || array_for_circles[cir] === 'circlenodeJS' || array_for_circles[cir] === 'circlePy')
         cir_array[cir].style.strokeDashoffset = circumference - 35 / 100 * circumference;
-    if (array_for_circles[cir] === 'circleCSS' || array_for_circles[cir] === 'circlejava' || array_for_circles[cir] === 'circleJS' || array_for_circles[cir] === 'circlec' || array_for_circles[cir] === 'circleAz' || array_for_circles[cir] === 'circleHTMl')
+    if ( array_for_circles[cir] === 'circlejava' || array_for_circles[cir] === 'circleJS' || array_for_circles[cir] === 'circlec' || array_for_circles[cir] === 'circleAz' || array_for_circles[cir] === 'circleHTMl')
         cir_array[cir].style.strokeDashoffset = circumference - 65 / 100 * circumference;
     if (array_for_circles[cir] === 'circle')
         cir_array[cir].style.strokeDashoffset = circumference - 60 / 100 * circumference;
+    if (array_for_circles[cir] === 'circleReact')
+        cir_array[cir].style.strokeDashoffset = circumference - 35 / 100 * circumference;
 }
 
  
